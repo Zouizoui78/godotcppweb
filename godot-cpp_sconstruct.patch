@@ -1,0 +1,16 @@
+diff --git a/SConstruct b/SConstruct
+index cfb2e95..bef5b06 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -403,6 +403,11 @@ elif env["platform"] == "javascript":
+     env.Replace(SHLINKFLAGS='$LINKFLAGS')
+     env.Replace(SHLINKFLAGS='$LINKFLAGS')
+ 
++    if env['target'] == 'debug':
++        env.Append(CCFLAGS=['-O0', '-g'])
++    elif env['target'] == 'release':
++        env.Append(CCFLAGS=['-O3'])
++
+ env.Append(CPPPATH=[
+     '.',
+     env['headers_dir'],
