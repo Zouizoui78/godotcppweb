@@ -6,7 +6,7 @@ Test with exporting for the web, Linux and windows a Godot project with GDNative
 
 Clone the project and its dependencies :
 
-    git clone https://git.zouizoui.ovh/zoui/godotcppweb.git
+    git clone https://github.com/Zouizoui78/godotcppweb
     cd godotcppweb
     git clone --recursive https://github.com/godotengine/godot-cpp -b 3.3
 
